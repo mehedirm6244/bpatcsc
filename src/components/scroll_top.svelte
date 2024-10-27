@@ -1,0 +1,18 @@
+<script>
+  import { onMount } from 'svelte';
+  import { ArrowUp } from "lucide-svelte";
+
+  let hideButton = true;
+
+  onMount(() => {
+    const threshold = window.innerHeight / 3;
+    document.addEventListener("scroll", ()=> {
+      const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+      hideButton = (scrolled <= threshold);
+    })
+  });
+</script>
+
+<button class="fixed bottom-6 right-6 rounded-full bg-indigo-500 duration-500 shadow active:-translate-y-2 z-10" class:translate-x-[100px]={hideButton} on:click={() => { window.scrollTo(0, 0); }}>
+  <ArrowUp size={36} class="text-white p-2"/>
+</button>

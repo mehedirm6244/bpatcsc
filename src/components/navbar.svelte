@@ -1,6 +1,5 @@
 <script>
-  import { Mail, Phone } from "lucide-svelte";
-
+  import { GraduationCap } from "lucide-svelte";
   import DropdownMenu from "../components/dropdown.svelte";
 
   let about_links = [
@@ -48,50 +47,47 @@
 </script>
 
 <!-- Navigation Bar -->
-<div class="bg-slate-500 shadow text-gray-200 p-4 sticky top-0 left-0 flex flex-col md:flex-row gap-3 justify-around text-sm z-10">
-  <!-- Contact Section (Left) -->
-  <div class="space-x-3">
-    <a href="tel:+88027747146"><Phone size={16} class="inline-block mr-1 -mt-0.5"/>(+88) 02-7747146</a>
-    <a href="mailto:bpatcsc@gmail.com"><Mail size={16} class="inline-block mr-1 -mt-0.5"/>bpatcsc@gmail.com</a>
+<div class="bg-gray-50 shadow-md text-gray-600 p-5 sticky top-0 left-0 flex flex-col lg:flex-row gap-5 justify-around items-center text-sm z-10">
+  <!-- Left Section -->
+  <div class="flex bg-gray-50 items-center justify-center gap-3">
+    <img src="assets/bpatcsc.png" class="w-12 h-12">
+    <div>
+      <p class="text-lg font-medium -mb-1.5">BPATC School and College</p>
+      <p class="text-sm">BPATC, Savar, Dhaka</p>
+    </div>
   </div>
 
   <!-- Navigation Links (Right) -->
-  <div class="space-x-3">
+  <div class="flex flex-wrap gap-3">
     <DropdownMenu caption="About" extendClasslist="navbar_dropdown text-gray-700 text-sm">
       {#each about_links as about_link}
-        <a href={about_link.target} class="block px-4 py-2 hover:bg-gray-300 hover:no-underline">{about_link.caption}</a>
+        <a href={about_link.target} class="block px-4 py-2 hover:bg-gray-200 duration-150 hover:no-underline">{about_link.caption}</a>
       {/each}
     </DropdownMenu>
     <DropdownMenu caption="Academics" extendClasslist="navbar_dropdown text-gray-700 text-sm">
       {#each academic_links as academic_link}
-        <a href={academic_link.target} class="block px-4 py-2 hover:bg-gray-300 hover:no-underline">{academic_link.caption}</a>
+        <a href={academic_link.target} class="block px-4 py-2 hover:bg-gray-200 duration-150 hover:no-underline">{academic_link.caption}</a>
       {/each}
     </DropdownMenu>
     <DropdownMenu caption="Teacher & Staff" extendClasslist="navbar_dropdown text-gray-700 text-sm">
       {#each staff_links as staff_link}
-        <a href={staff_link.target} class="block px-4 py-2 hover:bg-gray-300 hover:no-underline">{staff_link.caption}</a>
+        <a href={staff_link.target} class="block px-4 py-2 hover:bg-gray-200 duration-150 hover:no-underline">{staff_link.caption}</a>
       {/each}
     </DropdownMenu>
     <a href="">Notice</a>
     <DropdownMenu caption="Online Service" extendClasslist="navbar_dropdown text-gray-700 text-sm">
       {#each online_service_links as online_service_link}
-        <a href={online_service_link.target} class="block px-4 py-2 hover:bg-gray-300 hover:no-underline">{online_service_link.caption}</a>
+        <a href={online_service_link.target} class="block px-4 py-2 hover:bg-gray-200 duration-150 hover:no-underline">{online_service_link.caption}</a>
       {/each}
     </DropdownMenu>
     <DropdownMenu caption="Download" extendClasslist="navbar_dropdown text-gray-700 text-sm">
       {#each download_links as download_link}
-        <a href={download_link.target} class="block px-4 py-2 hover:bg-gray-300 hover:no-underline">{download_link.caption}</a>
+        <a href={download_link.target} class="block px-4 py-2 hover:bg-gray-200 duration-150 hover:no-underline">{download_link.caption}</a>
       {/each}
     </DropdownMenu>
-  </div>
-</div>
-
-<!-- Header -->
-<div class="flex items-center justify-center gap-5 p-10">
-  <img src="../src/assets/bpatcsc.png" class="w-20 h-20 md:w-24 md:h-24">
-  <div>
-    <p class="text-2xl md:text-3xl font-medium -mb-1">BPATC School and College</p>
-    <p class="text-lg md:text-2xl">BPATC, Savar, Dhaka</p>
+    <button class="bg-rose-500 py-2 px-3 -my-2 rounded">
+      <a href="#" class="text-white hover:no-underline"><GraduationCap size={16} class="inline-block mr-1 -mt-0.5"/>Admission</a>
+    </button>
   </div>
 </div>
 

@@ -4,7 +4,7 @@
   import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
   import '@splidejs/svelte-splide/css';
 
-  import { MoveRight, GraduationCap } from 'lucide-svelte';
+  import { MoveRight } from 'lucide-svelte';
 
   let feedback_messages = [
     {
@@ -36,7 +36,7 @@
       date: '30 Oct 2024'
     },
     {
-      title: 'প্রতিষ্ঠান হতে দরিদ্র/কল্যাণ তহবিল এ বৃত্তিপ্রাপ্ত শিক্ষার্থীদের ব্যাংক একাউন্ট নম্বর জমাদান সংক্রান্ত নোটিশ',
+      title: 'প্রতিষ্ঠান হতে দরিদ্র/কল্যাণ তহবিল এ বৃত্তিপ্রাপ্ত শিক্ষার্থীদের ব্যাংক একাউন্ট নম্বর জমাদান সংক্রান্ত',
       date: '30 Oct 2024'
     },
     {
@@ -102,24 +102,24 @@
 
   <div class="bg-fixed bg-cover bg-no-repeat" style="background-image: url('assets/college.jpg')">
     <div class="py-16 flex flex-col items-center bg-gray-200/95">
-      <p class="text-3xl font-medium"><span class="border-b-2 border-indigo-400">Latest Notice</span></p>
+      <p class="text-3xl font-medium"><span class="border-b-2 border-indigo-400">Recent Notice</span></p>
 
-      <div class="flex p-12 gap-4 items-center justify-center flex-wrap">
+      <div class="flex py-12 px-4 sm:px-12 gap-2 items-center justify-center flex-wrap">
         {#each recent_notice as notice, idx}
-          <div class="flex gap-6 items-center justify-center align-middle" use:reveal={{ transition: "fly", y:20, duration: 500, delay: 100*idx }}>
-            <div class="bg-teal-600 text-gray-50 h-24 max-w-24 p-4 flex flex-none items-center justify-center align-middle">
-              <p class="text-center">{notice.date}</p>
+          <div class="flex gap-5 p-2 items-center justify-center align-middle hover:bg-gray-100 hover:-translate-y-1 hover:shadow-md rounded duration-100" use:reveal={{ transition: "fly", y:20, duration: 500, delay: 100*idx }}>
+            <div class="bg-teal-600 text-gray-50 h-[88px] max-w-[88px] p-4 flex flex-none items-center justify-center align-middle rounded">
+              <p class="text-center text-sm">{notice.date}</p>
             </div>
 
             <div class="sm:w-96">
-              <a href="" class="text-lg md:text-xl">{notice.title}</a>
+              <a href="" class="text-lg">{notice.title}</a>
             </div>
           </div>
         {/each}
       </div>
       <a href="">
-        <button class="text-lg text-sky-600" use:reveal={{ transition: "fly", y:20, duration: 500, delay: 500 }}>
-          See All<MoveRight size={28} strokeWidth={1} class="inline-block -mt-0.5 ml-1"/>
+        <button class="text-base text-sky-600" use:reveal={{ transition: "fly", y:20, duration: 500, delay: 500 }}>
+          All Notices<MoveRight size={28} strokeWidth={1} class="inline-block -mt-0.5 ml-1"/>
         </button>
       </a>
     </div>
@@ -144,7 +144,7 @@
         <SplideTrack>
           {#each feedback_messages as feedback}
             <SplideSlide>
-              <div class="bg-gray-50 border-t-2 border-sky-500 w-full sm:w-[512px] m-auto mt-12 mb-2 p-8 shadow-md">
+              <div class="bg-gray-50 border-t-2 border-sky-500 w-11/12 sm:w-[512px] m-auto mt-12 mb-2 p-8 shadow-md">
                 <div class="-mt-16 mb-6 flex justify-center">
                   <img src={feedback.avatar} class="w-20 h-20 rounded-full shadow-md object-cover">
                 </div>

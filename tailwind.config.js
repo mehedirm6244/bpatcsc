@@ -7,7 +7,7 @@ export default {
 
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
       },
       keyframes: {
         slide: {

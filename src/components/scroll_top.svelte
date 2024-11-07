@@ -13,6 +13,6 @@
   });
 </script>
 
-<button class="fixed bottom-6 right-6 rounded-full bg-indigo-500 duration-500 shadow active:-translate-y-2 z-10" class:translate-x-[100px]={hideButton} on:click={() => { window.scrollTo(0, 0); }}>
+<button class="fixed bottom-6 right-6 rounded-full bg-indigo-500 duration-500 shadow-md active:-translate-y-2 z-10" class:translate-x-[100px]={hideButton} on:click={() => { window.scrollTo(0, 0); }}>
   <ArrowUp size={36} class="text-white p-2"/>
 </button>

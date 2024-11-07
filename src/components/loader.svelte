@@ -18,8 +18,8 @@
     width: 64px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 6px solid #0000;
-    border-right-color: #0ea5e997;
+    border: 4px solid #0000;
+    border-right-color: #0ea5e990;
     position: relative;
     animation: l24 1s infinite linear;
   }
@@ -27,7 +27,7 @@
   .loader:after {
     content: "";
     position: absolute;
-    inset: -6px;
+    inset: -4px;
     border-radius: 50%;
     border: inherit;
     animation: inherit;

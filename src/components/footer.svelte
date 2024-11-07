@@ -5,7 +5,7 @@
 <div class="bg-gray-700 text-gray-200 text-sm p-6">
   <div class="p-8 md:p-12 lg:p-16 sm:flex justify-evenly items-center align-middle space-y-6 sm:space-y-0">
     <div class="sm:w-1/3 lg:w-1/4 sm:flex flex-row items-center justify-center">
-      <img src="assets/bpatcsc.png" class="w-24 h-24 md:w-28 md:h-28">
+      <img src="assets/bpatcsc.png" class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
     </div>
 
     <div class="sm:w-1/3 lg:w-1/4 sm:flex flex-col items-center justify-center">
